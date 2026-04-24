@@ -13,7 +13,7 @@ A recipe manager mobile app built with Flutter.
 
 ## Backend
 This app connects to the SugarNote web backend hosted on Render.
-Web app repository: [link to your web repo]
+Web app repository: https://github.com/squiiishyyy/SugarNote-web-app
 
 ## Getting Started
 1. Clone the repo
@@ -22,6 +22,6 @@ Web app repository: [link to your web repo]
 
 ## Screenshots
 
-![Home Screen](screenshots/home.jpg)
-![Recipe Detail](screenshots/detail.jpg)
-![Login](screenshots/login.jpg)
+<img src="screenshots/home.png" width="300">
+<img src="screenshots/detail.png" width="300">
+<img src="screenshots/login.png" width="300">
