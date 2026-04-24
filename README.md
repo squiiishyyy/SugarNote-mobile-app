@@ -22,6 +22,6 @@ Web app repository: https://github.com/squiiishyyy/SugarNote-web-app
 
 ## Screenshots
 
-<img src="screenshots/home.png" width="300">
-<img src="screenshots/detail.png" width="300">
-<img src="screenshots/login.png" width="300">
+![Home Screen](screenshots/home.jpg)
+![Recipe Detail](screenshots/detail.jpg)
+![Login](screenshots/login.jpg)
