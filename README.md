@@ -7,6 +7,7 @@ A recipe manager mobile app built with Flutter.
 - Filter by category, ingredients and cook time
 - View recipe details with ingredients and instructions
 - Create, edit and delete your own recipes
+- User accounts and authentication
 - Favorite recipes
 - User profiles
 - Image upload via Cloudinary
