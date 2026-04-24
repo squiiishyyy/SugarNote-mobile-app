@@ -27,11 +27,19 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
 
   Future<void> _load() async {
     try {
-      final recipe = await ApiService.getRecipe(widget.recipeId);
-      final username = await ApiService.getUsername();
+      final token = await ApiService.getToken();
+      final results = await Future.wait([
+        ApiService.getRecipe(widget.recipeId),
+        ApiService.getUsername(),
+        if (token != null) ApiService.getFavorites(),
+      ]);
+      final recipe = results[0] as Recipe;
+      final username = results[1] as String?;
+      final favorites = token != null ? results[2] as List<Recipe> : <Recipe>[];
       setState(() {
         _recipe = recipe;
         _currentUsername = username;
+        _favorited = favorites.any((r) => r.id == widget.recipeId);
         _loading = false;
       });
     } catch (e) {

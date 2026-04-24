@@ -146,13 +146,18 @@ class ApiService {
   // ── Favorites ─────────────────────────────────────────────────
 
   static Future<List<Recipe>> getFavorites() async {
-    final token = await getToken();
-    final response = await http.get(
-      Uri.parse('$baseUrl/api/favorites'),
-      headers: {'Authorization': 'Bearer $token'},
-    ).timeout(_timeout);
-    final List data = jsonDecode(response.body);
-    return data.map((r) => Recipe.fromJson(r)).toList();
+    try {
+      final token = await getToken();
+      final response = await http.get(
+        Uri.parse('$baseUrl/api/favorites'),
+        headers: {'Authorization': 'Bearer $token'},
+      ).timeout(_timeout);
+      final decoded = jsonDecode(response.body);
+      if (decoded is! List) return [];
+      return decoded.map((r) => Recipe.fromJson(r)).toList();
+    } catch (e) {
+      return [];
+    }
   }
 
   static Future<bool> toggleFavorite(int recipeId) async {
