@@ -1,17 +1,27 @@
-# sugarnote
+# SugarNote Mobile
 
-A new Flutter project.
+A recipe manager mobile app built with Flutter.
+
+## Features
+- Browse and search recipes
+- Filter by category, ingredients and cook time
+- View recipe details with ingredients and instructions
+- Create, edit and delete your own recipes
+- Favorite recipes
+- User profiles
+- Image upload via Cloudinary
+
+## Backend
+This app connects to the SugarNote web backend hosted on Render.
+Web app repository: [link to your web repo]
 
 ## Getting Started
+1. Clone the repo
+2. Run `flutter pub get`
+3. Run `flutter run`
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Home Screen](screenshots/home.jpg)
+![Recipe Detail](screenshots/detail.jpg)
+![Login](screenshots/login.jpg)
